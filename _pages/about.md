@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: ""
+title: "About"
 excerpt: ""
 author_profile: true
 redirect_from: 
@@ -17,9 +17,9 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. Suspendisse condimentum, libero vel tempus mattis, risus risus vulputate libero, elementum fermentum mi neque vel nisl. Maecenas facilisis maximus dignissim. Curabitur mattis vulputate dui, tincidunt varius libero luctus eu. Mauris mauris nulla, scelerisque eget massa id, tincidunt congue felis. Sed convallis tempor ipsum rhoncus viverra. Pellentesque nulla orci, accumsan volutpat fringilla vitae, maximus sit amet tortor. Aliquam ultricies odio ut volutpat scelerisque. Donec nisl nisl, porttitor vitae pharetra quis, fringilla sed mi. Fusce pretium dolor ut aliquam consequat. Cras volutpat, tellus accumsan mattis molestie, nisl lacus tempus massa, nec malesuada tortor leo vel quam. Aliquam vel ex consectetur, vehicula leo nec, efficitur eros. Donec convallis non urna quis feugiat.
+I am a PhD student at the [Department of Civil and Environmental Engineering](https://cde.nus.edu.sg/cee/), National University of Singapore, member of the research group led by [Prof. Iris Yu](https://www.yuiris.com/). Prior to joining NUS, I earned my B.E. and M.S. degrees from Wuhan University, where I conducted my Master’s research under the supervision of [Prof. Liandong Zhu](https://jszy.whu.edu.cn/zhuliandong/zh_CN/index.htm).
 
-My research interest includes neural machine translation and computer vision. I have published more than 100 papers at the top international AI conferences with total <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'>google scholar citations <strong><span id='total_cit'>260000+</span></strong></a> (You can also use google scholar badge <a href='https://scholar.google.com/citations?user=DhtAFkwAAAAJ'><img src="https://img.shields.io/endpoint?url={{ url | url_encode }}&logo=Google%20Scholar&labelColor=f6f6f6&color=9cf&style=flat&label=citations"></a>).
+My research interest focuses on microwave-assisted biorefineries, microalgae cultivation, biomass valorization, and sustainable biofuel production. My work is particularly centered on developing efficient and low-carbon pathways for converting biomass and waste-derived resources into valuable fuels, chemicals, and materials. I am also interested in integrating advanced thermochemical and bioprocessing technologies with techno-economic and environmental assessments to support the development of scalable and sustainable bioresource systems.
 
 
 # 🔥 News
