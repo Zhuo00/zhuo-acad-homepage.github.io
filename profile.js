@@ -18,11 +18,15 @@ window.PROFILE = {
     title: 'Towards sustainable microalgal farming: Galdieria sulphuraria cultivation on readily available short-chain sugars',
     authors: 'Zhuo Li, Qiaozhi Zhang, Iris K.M. Yu',
     venue: 'Chemical Engineering Journal 528 · 2026 · 172420',
-    description: 'A starch model system reveals how oligosaccharide-rich hydrolysates can support G. sulphuraria, with evidence for extracellular saccharification.',
-    placeholder: false,
-    // Replace empty URLs to show Paper / Code / Project links.
-    paper: 'https://doi.org/10.1016/j.cej.2025.172420', code: '', project: '',
-    bibtex: '@article{li2026microalgal,\n  title = {Towards sustainable microalgal farming: Galdieria sulphuraria cultivation on readily available short-chain sugars},\n  author = {Li, Zhuo and Zhang, Qiaozhi and Yu, Iris K. M.},\n  journal = {Chemical Engineering Journal},\n  volume = {528},\n  pages = {172420},\n  year = {2026},\n  doi = {10.1016/j.cej.2025.172420}\n}'
+    paper: 'https://doi.org/10.1016/j.cej.2025.172420',
+    image: 'Picture1.svg',
+    imageAlt: 'Graphical abstract of microwave-assisted starch hydrolysis and Galdieria sulphuraria cultivation.',
+    // For future publications, ask Zhuo for the image and 2–3 short highlights.
+    highlights: [
+      'Microwaves lead to an energy saving of c.a. 60 % compared to conventional heating.',
+      'Mild microwave-assisted hydrolysis yields oligosaccharide-rich starch hydrolysate.',
+      'Galdieria sulphuraria can effectively grow in hydrolysates that have limited glucose.'
+    ]
   }],
   education: [
     {period: 'Present', title: 'National University of Singapore', detail: 'PhD Student', note: '[Department / research group]'},

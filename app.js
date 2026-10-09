@@ -5,6 +5,11 @@
   const el = (tag, text, cls) => { const n = document.createElement(tag); if (text) n.textContent = text; if (cls) n.className = cls; return n; };
   const safeURL = value => { try { const u = new URL(value); return ['https:', 'http:'].includes(u.protocol) ? u.href : null; } catch { return null; } };
   const link = (label, url) => { const a = el('a', label); a.href = url; if (!url.startsWith('mailto:')) { a.target = '_blank'; a.rel = 'noopener noreferrer'; } return a; };
+  const scientificText = (node, text) => {
+    const name = 'Galdieria sulphuraria';
+    String(text).split(name).forEach((part, i) => { if (i) node.append(el('i', name)); node.append(document.createTextNode(part)); });
+    return node;
+  };
   byId('profile-name').textContent = p.name;
   byId('profile-role').textContent = p.role;
   byId('profile-affiliation').textContent = p.affiliation;
@@ -25,12 +30,20 @@
   if (!p.news.length) { const empty = el('div', '', 'news-empty'); empty.append(el('span', '✦'), el('p', 'Updates coming soon.')); byId('news-list').append(empty); }
   p.news.forEach(item => { const row = el('div', '', 'news-row'); row.append(el('time', item.date), el('span', item.text)); byId('news-list').append(row); });
   p.publications.forEach(pub => {
-    const card = el('article', '', 'publication'); const top = el('div', '', 'pub-topline'); top.append(el('span', pub.venue)); if (pub.placeholder) top.append(el('span', 'TEMPLATE', 'badge'));
-    card.append(top, el('h3', pub.title), el('p', pub.authors, 'authors'), el('p', pub.description, 'pub-description'));
-    const links = el('div', '', 'pub-links');
-    [['Paper', pub.paper], ['Code', pub.code], ['Project', pub.project]].forEach(([label, value]) => { const url = safeURL(value); if (url) links.append(link(label, url)); });
-    if (pub.bibtex) { const b = el('button', 'BibTeX'); b.addEventListener('click', () => { byId('citation-text').textContent = pub.bibtex; byId('copy-status').textContent = ''; byId('citation-dialog').showModal(); }); links.append(b); }
-    card.append(links); byId('publication-list').append(card);
+    const card = el('article', '', 'publication publication-row');
+    if (pub.image && /^(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_.-]+\.(?:svg|png|jpe?g|webp)$/i.test(pub.image)) {
+      const figure = el('a', '', 'publication-figure'); figure.href = pub.image; figure.target = '_blank'; figure.rel = 'noopener noreferrer';
+      figure.setAttribute('aria-label', 'Open graphical abstract: ' + pub.title);
+      const img = el('img'); img.src = pub.image; img.alt = pub.imageAlt || 'Graphical abstract for ' + pub.title; img.loading = 'lazy'; img.decoding = 'async';
+      figure.append(img); card.append(figure);
+    } else card.classList.add('publication-without-image');
+    const content = el('div', '', 'publication-content'); const heading = el('h3');
+    const paperURL = safeURL(pub.paper);
+    heading.append(scientificText(paperURL ? link('', paperURL) : el('span'), pub.title));
+    content.append(heading, el('p', pub.authors, 'authors'), el('p', pub.venue, 'publication-venue'));
+    const highlights = el('ul', '', 'publication-highlights');
+    (pub.highlights || []).forEach(text => highlights.append(scientificText(el('li'), text)));
+    content.append(highlights); card.append(content); byId('publication-list').append(card);
   });
   p.education.forEach(item => { const row = el('article', '', 'timeline-item'); const top = el('div', '', 'timeline-top'); top.append(el('h3', item.title), el('time', item.period)); row.append(top, el('p', item.detail, 'detail'), el('p', item.note)); byId('education-list').append(row); });
   byId('contact-copy').textContent = p.contact;
@@ -44,7 +57,6 @@
   if (savedTheme === 'dark') document.body.classList.add('dark');
   const updateThemeLabel = () => toggle.setAttribute('aria-label', 'Switch to ' + (document.body.classList.contains('dark') ? 'light' : 'dark') + ' theme');
   updateThemeLabel(); toggle.addEventListener('click', () => { document.body.classList.toggle('dark'); try { localStorage.setItem('zhuo-theme', document.body.classList.contains('dark') ? 'dark' : 'light'); } catch {} updateThemeLabel(); });
-  byId('copy-citation').addEventListener('click', async () => { try { await navigator.clipboard.writeText(byId('citation-text').textContent); byId('copy-status').textContent = 'Citation copied.'; } catch { byId('copy-status').textContent = 'Select and copy the citation above.'; } });
   const navLinks = [...document.querySelectorAll('nav a')];
   if ('IntersectionObserver' in window) { const observer = new IntersectionObserver(entries => { for (const entry of entries) { if (entry.isIntersecting) { navLinks.forEach(a => { const active = a.hash === '#' + entry.target.id; a.classList.toggle('active', active); if (active) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current'); }); } } }, {rootMargin: '-15% 0px -55% 0px'}); navLinks.forEach(a => observer.observe(document.querySelector(a.hash))); }
 })();
