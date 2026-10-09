@@ -13,7 +13,15 @@
   document.title = p.name + ' | Academic Homepage';
   byId('intro').textContent = p.intro;
   p.bio.forEach(text => byId('bio').append(el('p', text)));
-  p.interests.forEach((item, i) => { const card = el('article', '', 'interest'); card.append(el('span', String(i + 1).padStart(2, '0'), 'interest-index'), el('h3', item.title), el('p', item.description)); byId('interests').append(card); });
+  p.interests.forEach((item, i) => {
+    if (item.href && /^[a-zA-Z0-9][a-zA-Z0-9._/-]*\.html$/.test(item.href)) {
+      const card = el('a', '', 'research-story-card'); card.href = item.href;
+      card.append(el('span', item.label || 'Research story', 'story-card-label'), el('h3', item.title), el('p', item.description));
+      const bottom = el('div', '', 'story-card-bottom'); bottom.append(el('span', item.status || ''), el('span', 'Explore the story', 'story-card-cta')); card.append(bottom); byId('interests').append(card);
+    } else {
+      const card = el('article', '', 'interest'); card.append(el('span', String(i + 1).padStart(2, '0'), 'interest-index'), el('h3', item.title), el('p', item.description)); byId('interests').append(card);
+    }
+  });
   if (!p.news.length) { const empty = el('div', '', 'news-empty'); empty.append(el('span', '✦'), el('p', 'Updates coming soon.')); byId('news-list').append(empty); }
   p.news.forEach(item => { const row = el('div', '', 'news-row'); row.append(el('time', item.date), el('span', item.text)); byId('news-list').append(row); });
   p.publications.forEach(pub => {

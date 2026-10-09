@@ -1,5 +1,5 @@
 // Edit this file to personalize your homepage. Keep strings in quotation marks.
-// All bracketed text and the publication below are placeholders, not real claims.
+// Bracketed text is placeholder content. The 2026 publication is a real paper.
 window.PROFILE = {
   name: 'Zhuo Li',
   role: 'PhD Student',
@@ -10,21 +10,19 @@ window.PROFILE = {
     'I am advised by [your advisor’s name]. Before joining NUS, I received my [degree] from [university]. Outside of research, I enjoy [your interests].'
   ],
   interests: [
-    { title: '[Primary research area]', description: 'Describe the central questions that motivate your research.' },
-    { title: '[Methods & approaches]', description: 'Introduce the tools and methods you use to investigate these questions.' },
-    { title: '[Applications & impact]', description: 'Share where your work can make a useful contribution.' }
+    { title: 'Food waste hydrolysate for microalgae cultivation', description: 'Why an acid-loving microalga? Follow the path from acidic sugar streams to a surprising finding about oligosaccharides, and the questions that come next.', href: 'research.html', label: 'A research story', status: 'Study 01 published · Study 02 forthcoming' }
   ],
   // Add updates like: {date: 'Oct 2026', text: 'Our paper was accepted at ...'}
   news: [],
   publications: [{
-    title: 'Your publication title',
-    authors: 'Zhuo Li, [Coauthor names]',
-    venue: '[Conference or journal] · [Year]',
-    description: 'Add a brief summary of the problem, your approach, and the main contribution of this work.',
-    placeholder: true,
+    title: 'Towards sustainable microalgal farming: Galdieria sulphuraria cultivation on readily available short-chain sugars',
+    authors: 'Zhuo Li, Qiaozhi Zhang, Iris K.M. Yu',
+    venue: 'Chemical Engineering Journal 528 · 2026 · 172420',
+    description: 'A starch model system reveals how oligosaccharide-rich hydrolysates can support G. sulphuraria, with evidence for extracellular saccharification.',
+    placeholder: false,
     // Replace empty URLs to show Paper / Code / Project links.
-    paper: '', code: '', project: '',
-    bibtex: '@article{li_year_title,\n  title = {Your publication title},\n  author = {Li, Zhuo and Coauthor},\n  journal = {Your journal or conference},\n  year = {YYYY}\n}'
+    paper: 'https://doi.org/10.1016/j.cej.2025.172420', code: '', project: '',
+    bibtex: '@article{li2026microalgal,\n  title = {Towards sustainable microalgal farming: Galdieria sulphuraria cultivation on readily available short-chain sugars},\n  author = {Li, Zhuo and Zhang, Qiaozhi and Yu, Iris K. M.},\n  journal = {Chemical Engineering Journal},\n  volume = {528},\n  pages = {172420},\n  year = {2026},\n  doi = {10.1016/j.cej.2025.172420}\n}'
   }],
   education: [
     {period: 'Present', title: 'National University of Singapore', detail: 'PhD Student', note: '[Department / research group]'},
