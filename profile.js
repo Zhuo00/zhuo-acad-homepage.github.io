@@ -4,10 +4,10 @@ window.PROFILE = {
   name: 'Zhuo Li',
   role: 'PhD Student',
   affiliation: 'National University of Singapore',
-  intro: 'I’m a PhD student at the National University of Singapore.',
+  intro: 'I am currently a Ph.D. student at the National University of Singapore (NUS), under the supervision of [Prof. Iris Yu](https://cde.nus.edu.sg/cee/staff/iris-yu/). My research focuses on microwave-assisted waste valorization and microalgal bioproduction. My research interests include **sustainable bioprocess engineering, microalgal biotechnology, and waste-to-resource conversion.**',
   bio: [
-    'My research focuses on [your research area], with a particular interest in [your specific topic]. I aim to develop methods that connect fundamental ideas with practical challenges.',
-    'I am advised by [your advisor’s name]. Before joining NUS, I received my [degree] from [university]. Outside of research, I enjoy [your interests].'
+    'I graduated from Wuhan University with bachelor’s degree and master’s degree, advised by [Prof. Liandong Zhu](https://jszy.whu.edu.cn/zhuliandong/zh_CN/more/1133661/jsjjgd/index.htm). During my studies, I was honored to receive several awards and recognitions, including the Baosteel Outstanding Student Award, the National Scholarship, and the Mitacs Globalink Research Internship.',
+    'I am always open to academic collaborations and research discussions. If you are interested in exploring potential collaborations, please feel free to contact me at [**e1135498@u.nus.edu**](mailto:e1135498@u.nus.edu).'
   ],
   interests: [
     { title: 'Food waste hydrolysate for microalgae cultivation', description: 'Why an acid-loving microalga? Follow the path from acidic sugar streams to a surprising finding about oligosaccharides, and the questions that come next.', href: 'research.html', label: 'A research story', status: 'Study 01 published · Study 02 forthcoming' }
@@ -32,7 +32,7 @@ window.PROFILE = {
     {period: 'Present', title: 'National University of Singapore', detail: 'PhD Student', note: '[Department / research group]'},
     {period: '[Years]', title: '[Previous university]', detail: '[Degree and field of study]', note: '[Optional honors or highlights]'}
   ],
-  contact: 'I welcome conversations about research and potential collaborations. My contact details will be added here soon.',
+  contact: 'I am always open to academic collaborations and research discussions. If you are interested in exploring potential collaborations, please feel free to contact me.',
   // Add your own details here; links appear automatically when supplied.
-  email: '', scholar: '', github: '', linkedin: '',
+  email: 'e1135498@u.nus.edu', scholar: '', github: '', linkedin: '',
 };

@@ -16,8 +16,24 @@
   document.querySelector('.brand').firstChild.textContent = p.name;
   document.querySelector('.about h2 span').textContent = p.name + '.';
   document.title = p.name + ' | Academic Homepage';
-  byId('intro').textContent = p.intro;
-  p.bio.forEach(text => byId('bio').append(el('p', text)));
+  const richText = (node, text) => {
+    const pattern = /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)]+)\)/g;
+    let cursor = 0;
+    for (const match of String(text).matchAll(pattern)) {
+      node.append(document.createTextNode(text.slice(cursor, match.index)));
+      if (match[1]) node.append(el('strong', match[1]));
+      else {
+        const url = safeURL(match[3]) || (/^mailto:[^\s@]+@[^\s@]+\.[^\s@]+$/.test(match[3]) ? match[3] : null);
+        const label = match[2];
+        node.append(url ? richText(link('', url), label) : document.createTextNode(label));
+      }
+      cursor = match.index + match[0].length;
+    }
+    node.append(document.createTextNode(text.slice(cursor)));
+    return node;
+  };
+  richText(byId('intro'), p.intro);
+  p.bio.forEach(text => byId('bio').append(richText(el('p'), text)));
   p.interests.forEach((item, i) => {
     if (item.href && /^[a-zA-Z0-9][a-zA-Z0-9._/-]*\.html$/.test(item.href)) {
       const card = el('a', '', 'research-story-card'); card.href = item.href;
