@@ -34,5 +34,9 @@ window.PROFILE = {
   ],
   contact: 'I am always open to academic collaborations and research discussions. If you are interested in exploring potential collaborations, please feel free to contact me.',
   // Add your own details here; links appear automatically when supplied.
-  email: 'e1135498@u.nus.edu', scholar: '', github: '', linkedin: '',
+  email: 'e1135498@u.nus.edu',
+  orcid: 'https://orcid.org/0000-0002-8046-9022',
+  scholar: 'https://scholar.google.com/citations?user=sfC82HcAAAAJ&hl=en',
+  linkedin: 'https://www.linkedin.com/in/zhuo-li-astra',
+  github: '',
 };

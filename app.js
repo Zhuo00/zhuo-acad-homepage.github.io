@@ -65,8 +65,29 @@
   byId('contact-copy').textContent = p.contact;
   const contactLinks = [];
   if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(p.email)) contactLinks.push(['Email', 'mailto:' + p.email]);
-  [['Google Scholar', p.scholar], ['GitHub', p.github], ['LinkedIn', p.linkedin]].forEach(([label, value]) => { const url = safeURL(value); if (url) contactLinks.push([label, url]); });
-  contactLinks.forEach(([label, url]) => { byId('profile-links').append(link(label, url)); byId('contact-links').append(link(label === 'Email' ? p.email : label, url)); });
+  [['LinkedIn', p.linkedin], ['Google Scholar', p.scholar], ['ORCID', p.orcid], ['GitHub', p.github]].forEach(([label, value]) => { const url = safeURL(value); if (url) contactLinks.push([label, url]); });
+  const socialIcon = label => {
+    const ns = 'http://www.w3.org/2000/svg';
+    const icon = document.createElementNS(ns, 'svg');
+    icon.setAttribute('viewBox', '0 0 24 24'); icon.setAttribute('aria-hidden', 'true'); icon.setAttribute('focusable', 'false'); icon.classList.add('social-icon');
+    const shape = (tag, attrs, text) => { const n = document.createElementNS(ns, tag); Object.entries(attrs).forEach(([key, value]) => n.setAttribute(key, value)); if (text) n.textContent = text; icon.append(n); };
+    if (label === 'Email') {
+      shape('rect', {x:3,y:5,width:18,height:14,rx:2}); shape('path', {d:'m3 6 9 7 9-7'});
+    } else if (label === 'LinkedIn') {
+      shape('rect', {x:2,y:2,width:20,height:20,rx:2,fill:'currentColor',stroke:'none'});
+      shape('text', {x:12,y:17,'text-anchor':'middle','font-size':16,'font-weight':700,'font-family':'Arial, sans-serif',fill:'var(--surface)',stroke:'none'}, 'in');
+    } else if (label === 'Google Scholar') {
+      shape('path', {d:'m1 9 11-6 11 6-11 6z',fill:'currentColor',stroke:'none'}); shape('path', {d:'M6 13v5q6 5 12 0v-5M22 10v8'});
+    } else if (label === 'ORCID') {
+      shape('circle', {cx:12,cy:12,r:10,fill:'currentColor',stroke:'none'});
+      shape('text', {x:12,y:16,'text-anchor':'middle','font-size':12,'font-family':'Arial, sans-serif',fill:'var(--surface)',stroke:'none'}, 'iD');
+    } else shape('circle', {cx:12,cy:12,r:8});
+    return icon;
+  };
+  contactLinks.forEach(([label, url]) => {
+    const iconLink = text => { const a = link('', url); a.classList.add('social-link'); a.append(socialIcon(label), el('span', text)); return a; };
+    byId('profile-links').append(iconLink(label)); byId('contact-links').append(iconLink(label === 'Email' ? p.email : label));
+  });
   byId('year').textContent = new Date().getFullYear();
   const toggle = document.querySelector('.theme-toggle');
   let savedTheme; try { savedTheme = localStorage.getItem('zhuo-theme'); } catch {}
