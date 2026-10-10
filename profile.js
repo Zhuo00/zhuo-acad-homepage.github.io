@@ -27,6 +27,18 @@ window.PROFILE = {
       'Mild microwave-assisted hydrolysis yields oligosaccharide-rich starch hydrolysate.',
       'Galdieria sulphuraria can effectively grow in hydrolysates that have limited glucose.'
     ]
+  }, {
+    title: 'Physiological responses and removal mechanisms of ciprofloxacin in freshwater microalgae',
+    authors: 'Zhuo Li, Shuangxi Li, Qirui Wu, Xinxin Gao, Liandong Zhu',
+    venue: 'Journal of Hazardous Materials 466 · 2024 · 133519',
+    paper: 'https://doi.org/10.1016/j.jhazmat.2024.133519',
+    image: 'cip-graphical-abstract.jpg',
+    imageAlt: 'Graphical abstract of ciprofloxacin removal and intracellular biodegradation in freshwater microalgae.',
+    highlights: [
+      'Selected microalgae showed high resistance to CIP.',
+      'Intracellular accumulation plays important roles in antibiotics removal.',
+      'Ciprofloxacin could be biodegraded with the help of intracellular oxidoreductases.'
+    ]
   }],
   education: [
     {period: 'Present', title: 'National University of Singapore', detail: 'PhD Student', note: ''},
