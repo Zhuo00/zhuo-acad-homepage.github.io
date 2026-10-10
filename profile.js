@@ -29,8 +29,9 @@ window.PROFILE = {
     ]
   }],
   education: [
-    {period: 'Present', title: 'National University of Singapore', detail: 'PhD Student', note: '[Department / research group]'},
-    {period: '[Years]', title: '[Previous university]', detail: '[Degree and field of study]', note: '[Optional honors or highlights]'}
+    {period: 'Present', title: 'National University of Singapore', detail: 'PhD Student', note: ''},
+    {period: '2020.09–2023.05', title: 'Wuhan University', detail: 'Master’s degree', note: ''},
+    {period: '2016.09–2020.05', title: 'Wuhan University', detail: 'Bachelor’s degree', note: ''}
   ],
   contact: 'I am always open to academic collaborations and research discussions. If you are interested in exploring potential collaborations, please feel free to contact me.',
   // Add your own details here; links appear automatically when supplied.
