@@ -1,0 +1,22 @@
+:root{--bg:#fff;--surface:#fff;--ink:#292929;--muted:#555;--accent:#292929;--line:#e8e8e8;--tint:#f6f6f6;--shadow:0 4px 18px #00000008}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.65}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible,.question-list summary:focus-visible{outline-color:#777}
+.brand,.profile h1,.about h2,.section-heading h2{letter-spacing:normal}
+.portrait{border-color:var(--line);background:var(--tint)}
+.portrait span{font-family:Arial,Helvetica,sans-serif;font-weight:600;letter-spacing:-3px;color:var(--ink)}
+.about h2,.contact-section h2,.research-story-card h3,.story-hero h1,.chapter h2,.takeaway p{font-family:Arial,Helvetica,sans-serif;letter-spacing:normal;font-weight:600}
+.about h2{font-size:30px;line-height:1.4}
+.intro,.body-copy p{font-size:16px;line-height:1.7;color:var(--muted);font-weight:400;margin:0 0 14px}
+.intro strong,.body-copy strong{font-weight:700;color:var(--ink)}
+.about a:not(.text-link),.contact-section a,.paper-reference a,.aside-paper a{text-decoration:underline;text-underline-offset:3px}
+.text-link{border-bottom-color:var(--ink)}
+.affiliation{color:var(--muted)}
+.research-story-card h3{font-size:21px}
+.chapter-nav{box-shadow:none}
+.publication-figure{box-shadow:0 3px 12px #0000000c}
+.publication-figure:hover{box-shadow:0 4px 17px #00000018}
+body.dark{--bg:#171717;--surface:#202020;--ink:#eee;--muted:#c1c1c1;--accent:#eee;--line:#3a3a3a;--tint:#262626;--shadow:none}
+body.dark .portrait{border-color:var(--line)}
+body.dark .button{color:#171717}
+@media(max-width:650px){.about h2{font-size:26px}.intro,.body-copy p{font-size:16px;line-height:1.7}.research-story-card h3{font-size:20px}}
