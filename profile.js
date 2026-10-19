@@ -14,7 +14,7 @@ window.PROFILE = {
     { title: 'Freshwater microalgae and fluoroquinolone antibiotics', description: 'From moxifloxacin toxicity to ciprofloxacin uptake and biodegradation: explore how antibiotic stress connects with microalgal removal mechanisms.', href: 'fluoroquinolone-research.html', label: 'Master’s research', status: 'Wuhan University · Three published studies' }
   ],
   // Add updates like: {date: 'Oct 2026', text: 'Our paper was accepted at ...'}
-  news: [],
+  news: [{date: '2024', text: 'Received the Best Student Poster Award (Nexus and Circularity) at the SIWW 2024 Water Convention.'}],
   publications: [{
     title: 'Towards sustainable microalgal farming: Galdieria sulphuraria cultivation on readily available short-chain sugars',
     authors: 'Zhuo Li, Qiaozhi Zhang, Iris K.M. Yu',
