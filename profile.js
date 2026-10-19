@@ -10,7 +10,8 @@ window.PROFILE = {
     'I am always open to academic collaborations and research discussions. If you are interested in exploring potential collaborations, please feel free to contact me at [**e1135498@u.nus.edu**](mailto:e1135498@u.nus.edu).'
   ],
   interests: [
-    { title: 'Food waste hydrolysate for microalgae cultivation', description: 'Why an acid-loving microalga? Follow the path from acidic sugar streams to a surprising finding about oligosaccharides, and the questions that come next.', href: 'research.html', label: 'A research story', status: 'Study 01 published · Study 02 forthcoming' }
+    { title: 'Food waste hydrolysate for microalgae cultivation', description: 'Why an acid-loving microalga? Follow the path from acidic sugar streams to a surprising finding about oligosaccharides, and the questions that come next.', href: 'research.html', label: 'A research story', status: 'Study 01 published · Study 02 forthcoming' },
+    { title: 'Freshwater microalgae and fluoroquinolone antibiotics', description: 'From moxifloxacin toxicity to ciprofloxacin uptake and biodegradation: explore how antibiotic stress connects with microalgal removal mechanisms.', href: 'fluoroquinolone-research.html', label: 'Master’s research', status: 'Wuhan University · Three published studies' }
   ],
   // Add updates like: {date: 'Oct 2026', text: 'Our paper was accepted at ...'}
   news: [],

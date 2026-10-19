@@ -30,4 +30,8 @@ body.dark .button{color:#171717}
 .culture-photo{margin:25px 0 30px;max-width:620px}
 .culture-photo a{display:block;line-height:0}
 .culture-photo img{display:block;width:100%;height:auto;border-radius:6px;border:1px solid var(--line)}
+.master-figure{margin:25px 0 28px}
+.master-figure a{display:block;line-height:0}
+.master-figure img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:5px}
+.master-figure figcaption{font-size:13px;line-height:1.7;color:var(--muted);font-style:italic;margin-top:9px}
 @media(max-width:650px){.about h2{font-size:26px}.intro,.body-copy p{font-size:16px;line-height:1.7}.research-story-card h3{font-size:20px}}

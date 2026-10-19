@@ -56,7 +56,10 @@
     const content = el('div', '', 'publication-content'); const heading = el('h3');
     const paperURL = safeURL(pub.paper);
     heading.append(scientificText(paperURL ? link('', paperURL) : el('span'), pub.title));
-    content.append(heading, el('p', pub.authors, 'authors'), el('p', pub.venue, 'publication-venue'));
+    const venue = el('p', '', 'publication-venue');
+    const journalName = pub.venue.split(' · ')[0].replace(/\s+\d+$/, '');
+    venue.append(el('strong', journalName), document.createTextNode(pub.venue.slice(journalName.length)));
+    content.append(heading, el('p', pub.authors, 'authors'), venue);
     const highlights = el('ul', '', 'publication-highlights');
     (pub.highlights || []).forEach(text => highlights.append(scientificText(el('li'), text)));
     content.append(highlights); card.append(content); byId('publication-list').append(card);
