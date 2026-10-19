@@ -28,6 +28,21 @@ window.PROFILE = {
       'Galdieria sulphuraria can effectively grow in hydrolysates that have limited glucose.'
     ]
   }, {
+    "title": "Microwave-assisted biorefineries",
+    "authors": "Qiaozhi Zhang, Zhuo Li, Zhuoyue Liu, Yudha Dwi Prasetyatama, Wee Khoon Oh, Iris K. M. Yu",
+    "venue": "Nature Reviews Clean Technology 1 · 2025 · 269–287",
+    "paper": "https://doi.org/10.1038/s44359-025-00033-5",
+    "image": "microwave-biorefineries.png",
+    "imageAlt": "Overview of biomass feedstocks, microwave-applicable biorefinery technologies, and resulting products.",
+    "highlights": [
+        "Microwave processing could enable the development of energy-efficient biorefineries for lignocellulose pretreatment, extraction of bioactive substances, pyrolysis, hydrothermal treatment and fine chemical production.",
+        "Unlike conventional heating methods, the reacting matrix, including the feedstocks, solvents and additives, needs to be strong microwave absorbers for effective heating to occur under microwaves.",
+        "Non-equilibrium localized heating under microwaves, known as the hotspot effect, has been widely linked to the increased reaction rate and selective production observed in microwave experiments; however, there is not yet any empirical evidence on the universality of this link.",
+        "The feasibility of pilot-scale and field-scale microwave-assisted biorefineries has been experimentally demonstrated, especially for solid-phase processing such as pyrolysis.",
+        "Techno-economic assessments and life-cycle analyses indicate that microwave processing potentially has a lower cost and carbon footprint than conventional techniques; however, such a conclusion cannot be extrapolated to contexts outside the discussed studies and independent assessments are still required for new projects in real-life scenarios.",
+        "Hotspot monitoring and control alongside advances in microwave reactors could help to expedite the industrial-scale use of microwave-assisted biorefineries."
+    ]
+}, {
     title: 'Physiological responses and removal mechanisms of ciprofloxacin in freshwater microalgae',
     authors: 'Zhuo Li, Shuangxi Li, Qirui Wu, Xinxin Gao, Liandong Zhu',
     venue: 'Journal of Hazardous Materials 466 · 2024 · 133519',
