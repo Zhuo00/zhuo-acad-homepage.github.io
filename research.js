@@ -3,9 +3,6 @@
   const data = window.RESEARCH_STORY;
   const byId = id => document.getElementById(id);
   const el = (tag, text, cls) => { const n = document.createElement(tag); if (text) n.textContent = text; if (cls) n.className = cls; return n; };
-  data.questions.forEach(item => {
-    const details = el('details'); details.append(el('summary', item.title), el('p', item.body), el('p', item.next, 'question-next')); byId('question-list').append(details);
-  });
   const second = data.studyTwo;
   byId('study-two-status').textContent = second.status;
   byId('study-two-title').textContent = second.title;
